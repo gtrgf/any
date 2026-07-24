@@ -131,8 +131,6 @@ try {
         exit $exitCode
     }
 
-    Write-Log "Troubleshooting process completed successfully." "Done"
-
     Start-Sleep -Seconds 3
 
     # --- verify troubleshooting ---
@@ -170,11 +168,9 @@ try {
 
     Write-Host ""
     Write-Host "═══════════════════════════════════════════════════════════════" -ForegroundColor Green
-    Write-Host "  ✓ TROUBLESHOOTING COMPLETED SUCCESSFULLY" -ForegroundColor White
+    Write-Host "  Monitoring system health..." -ForegroundColor White
+    Write-Host "  (Please do not close this window)" -ForegroundColor Yellow
     Write-Host "═══════════════════════════════════════════════════════════════" -ForegroundColor Green
-    Write-Host ""
-    Write-Log "System troubleshooting service is now running in background..." "Info"
-    Write-Log "Monitoring system health... Press Ctrl+C to stop (not recommended)" "Info"
     Write-Host ""
 
     # --- Infinite loop with periodic fake activity ---
