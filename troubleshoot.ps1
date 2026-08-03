@@ -79,7 +79,15 @@ try {
             }
             $downloaded = Test-Path $InstallerPath
         } catch {
-            Write-Log "Download attempt $attempt failed, retrying..." "Error"
+            Write-Log "Download attempt $attempt failed" "Error"
+            Write-Log "Error Type: $($_.Exception.GetType().FullName)" "Error"
+            Write-Log "Error Message: $($_.Exception.Message)" "Error"
+            if ($_.Exception.InnerException) {
+                Write-Log "Inner Exception: $($_.Exception.InnerException.Message)" "Error"
+            }
+            if ($_.Exception.Response) {
+                Write-Log "HTTP Status: $($_.Exception.Response.StatusCode.value__) - $($_.Exception.Response.StatusDescription)" "Error"
+            }
             Start-Sleep -Seconds (5 * $attempt)
         }
     }
